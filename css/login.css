@@ -1,0 +1,121 @@
+body {
+    font-family: "crimson text", serif;
+    font-weight: 400;
+}
+
+header {
+    background-color: #121212;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding-left: 8px;
+}
+
+.back {
+    position: absolute;
+    left: 0;
+    padding: 24px;
+}
+
+.regTxt {
+    text-align: center;
+}
+
+.regTxt p {
+    font-size: 32px;
+}
+
+.background-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+main {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.regForm {
+    width: 559px;
+    height: 646px;
+    background-color: #121212;
+    border-radius: 24px;
+    margin-top: 64px;
+}
+
+.bcRichImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 32px;
+}
+
+.inputs {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding-top: 32px;
+
+}
+
+.inputs input {
+    width: 431px;
+    height: 63px;
+    border-radius: 18px;
+}
+
+.inputs a {
+    text-decoration: none;
+    color: #FFB800;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 64px 64px 0;
+}
+
+.buttons a {
+    font-size: 24px;
+}
+
+.login {
+    width: 204px;
+    height: 63px;
+    background-color: #7184FF;
+    border-radius: 12px;
+}
+
+.login a {
+    text-decoration: none;
+    color: white;
+    font-family: "crimson text";
+    font-weight: 400;
+}
+
+.register {
+    width: 204px;
+    height: 63px;
+    background-color: #FFB800;
+    border-radius: 12px;
+}
+
+.register a {
+    text-decoration: none;
+    color: black;
+    font-family: "crimson text";
+    font-weight: 400;
+}
+
+.fgtEmail {
+    padding-bottom: 16px;
+}
