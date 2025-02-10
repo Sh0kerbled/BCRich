@@ -1,6 +1,11 @@
+* {
+    padding: 0;
+}
+
 body {
     font-family: "crimson text", serif;
     font-weight: 400;
+    margin: 0;
 }
 
 header {
@@ -64,7 +69,6 @@ main {
     justify-content: center;
     align-items: center;
     padding-top: 32px;
-
 }
 
 .inputs input {
@@ -75,6 +79,8 @@ main {
     padding-left: 20px;
     box-sizing: border-box;
     font-size: 24px;
+    outline: none;
+    border: none;
 }
 
 .inputs a {
@@ -87,17 +93,22 @@ main {
     display: flex;
     justify-content: center;
     font-size: 24px;
+    font-family: "crimson text";
 }
 
 .buttons {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 64px 64px 0;
+    padding: 44px 64px 0;
+    outline: none;
 }
 
-.buttons a {
+.buttons button {
     font-size: 24px;
+    cursor: pointer;
+    color: white;
+    font-family: "crimson text";
 }
 
 .login {
@@ -105,13 +116,11 @@ main {
     height: 63px;
     background-color: #7184FF;
     border-radius: 12px;
+    border: none;
 }
 
-.login a {
-    text-decoration: none;
-    color: white;
-    font-family: "crimson text";
-    font-weight: 400;
+.login:active {
+    background-color: #3953fc;
 }
 
 .register {
@@ -119,13 +128,11 @@ main {
     height: 63px;
     background-color: #FFB800;
     border-radius: 12px;
+    border: none;
 }
 
-.register a {
-    text-decoration: none;
-    color: black;
-    font-family: "crimson text";
-    font-weight: 400;
+.register:active {
+    background-color: #ab7b01;
 }
 
 .fgtEmail {
