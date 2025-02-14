@@ -24,6 +24,7 @@ header {
     position: absolute;
     left: 0;
     padding: 24px;
+    height: 52px;
 }
 
 .regTxt {
