@@ -234,3 +234,216 @@ header {
     font-size: 24px;
     font-weight: 400;
 }
+
+.various {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 172px;
+}
+
+.variousGoods {
+    font-size: 52px;
+    font-weight: 600;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.items {
+    max-width: 1175px;
+    display: grid;
+    grid-template-columns: 540px 1fr;
+    grid-template-rows: auto auto;
+    margin: 0 auto;
+    padding-top: 64px;
+}
+
+.items .variousWidth:first-child {
+    grid-row: span 2;
+    /* Левая картинка занимает две строки */
+}
+
+.variousWidth:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.variousWidth:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.subscribe {
+    width: 100%;
+    height: 160px;
+    background-color: #232323;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 172px;
+}
+
+.logoFooter {
+    padding-left: 80px;
+}
+
+.inputAdress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 38px;
+    max-height: 75px;
+    gap: 8px;
+}
+
+.inputText {
+    color: #B7B7B7;
+    font-size: 24px;
+    font-weight: 400;
+    max-width: 419px;
+    font-family: "crimson text";
+}
+
+.inputText:before {
+    color: #FF7A00C7;
+    content: "SUBSCRIBE ";
+}
+
+.inputEmail {
+    max-width: 282px;
+    max-height: 55px;
+    width: 100%;
+    height: 55px;
+    border-radius: 8px;
+    background: #434343;
+    border: none;
+    outline: none;
+    font-size: 24px;
+    color: white;
+    font-family: "crimson text";
+}
+
+.subscribe input {
+    padding-left: 20px;
+}
+
+.inputAdress button {
+    width: 162px;
+    height: 55px;
+    border-radius: 8px;
+    background-color: #3974AB;
+    border: none;
+    color: white;
+    font-size: 24px;
+    font-family: "crimson text";
+}
+
+.inputAdress button:active {
+    background-color: #30608d;
+}
+
+.otherLinks {
+    margin: 64px 87px 64px 87px;
+    color: #666666;
+    font-family: "crimson text";
+    font-size: 40px;
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.socialLinks {
+    text-decoration: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    align-items: start;
+    max-width: 152px;
+}
+
+.GBES {
+    display: flex;
+    gap: 32px;
+    font-family: "crimson text";
+    align-items: start;
+}
+
+.guitars {
+    display: grid;
+    text-decoration: none;
+    width: 192px;
+}
+
+.guitars p {
+    color: #666666;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.guitars a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    padding-top: 12px;
+}
+
+.basses {
+    display: grid;
+    width: 192px;
+}
+
+.basses p {
+    color: #666666;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.basses a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    padding-top: 12px;
+}
+
+.extras {
+    display: grid;
+    width: 192px;
+}
+
+.extras p {
+    color: #666666;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.extras a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    padding-top: 12px;
+}
+
+.support {
+    display: grid;
+    width: 192px;
+}
+
+.support p {
+    color: #666666;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.support a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    padding-top: 12px;
+}
