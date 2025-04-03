@@ -1,30 +1,27 @@
-from fastapi import FastAPI, HTTPException, Response, Depends
-from authx import AuthX, AuthXConfig
+# main.py
+from fastapi import FastAPI, Request
+from fastapi.responses import HTMLResponse
+from fastapi.templating import Jinja2Templates
+from fastapi.staticfiles import StaticFiles
+import google.generativeai as genai
 from pydantic import BaseModel
 
+genai.configure(api_key="AIzaSyAh6SAi74kObmPYntdpOd4opOCsjKK2Sf0")
 
 app = FastAPI()
 
-config = AuthXConfig()
-config.JWT_SECRET_KEY = "SECRET_KEY"
-config.JWT_ACCESS_COOKIE_NAME = "my_access_token"
-config.JWT_TOKEN_LOCATION = ["cookies"]
+templates = Jinja2Templates(directory="templates")
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
-security = AuthX(config=config)
+class Message(BaseModel):
+    message: str
 
+@app.get("/", response_class=HTMLResponse)
+async def read_root(request: Request):
+    return templates.TemplateResponse("AIhelper.html", {"request": request})
 
-class UserLoginSchema(BaseModel):
-    userEmail:str
-    password:str
-
-@app.post("/login")
-def login(creds: UserLoginSchema, response: Response):
-    if creds.userEmail == "test" and creds.password == "test":
-        token = security.create_access_token(uid="12345")
-        response.set_cookie(config.JWT_ACCESS_COOKIE_NAME, token)
-    raise HTTPException(status_code=401, detail="bebebe kakashka")
-
-
-@app.get("/protected", dependencies=[Depends(security.access_token_required)])
-def protected():
-    return {"data": "TOP SECRET"}
+@app.post("/chat/")
+async def chat(message: Message):
+    model = genai.GenerativeModel('gemini-2.0-flash')
+    response = model.generate_content(message.message)
+    return {"response": response.text}

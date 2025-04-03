@@ -22,3 +22,12 @@ function rollSlider() {
 setInterval(() => {
     nextSlide();
 }, 3000);
+
+let number = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+for (let i = 0; i < number.length; i++) {
+    let newArray = number;
+    console.log(newArray);
+    if (number[i] % 2 == 0) {
+        console.log($`делится на 2 {number[i]}`);
+    }
+}
